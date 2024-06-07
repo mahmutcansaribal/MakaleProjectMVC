@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MakaleProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23715f7d39b667883e1e9444bac08b8db4ecdefc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29db48402818552213e92196320e8675736fe1f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("MakaleProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MakaleProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
