@@ -1,0 +1,15 @@
+﻿@model Role
+
+<form method="post">
+    <div class="border p-3 mt-5">
+        <div class="row pb-3">
+            <h2>Rol Ekleme Sayfasi</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <input asp-for="RoleName" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-info">Rol Ekle</button>
+        <a asp-controller="Role" asp-action="Index" class="btn btn-primary">Roller</a>
+    </div>
+</form>
