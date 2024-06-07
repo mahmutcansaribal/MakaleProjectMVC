@@ -19,5 +19,6 @@ namespace MakaleProject.Models
                 }
                 return builder.ToString();
             }
+        }
     }
 }

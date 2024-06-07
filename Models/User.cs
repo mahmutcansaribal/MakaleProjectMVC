@@ -2,7 +2,7 @@
 
 namespace MakaleProject.Models
 {
-    public class User
+    public partial class User
     {
         public int ID { get; set; }
         [Required(ErrorMessage = "Name is required")]
