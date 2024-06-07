@@ -1,0 +1,36 @@
+﻿@model List<User>
+
+<div class="container">
+    <div class="row-cols-md-1 pt-3 ob-4">
+        <h1>Kullanicilar</h1>
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Kullanici Adı</td>
+            <td>Kullanici Mail Adresi</td>
+            <td>Durum</td>
+            <td>Rol</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.MailAddress</td>
+                <td>@user.State</td>
+                <td>@user.Role.RoleName</td>
+                <td><a asp-controller="User" asp-action="Delete" asp-route-id="@user.ID" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="row pt-3 pb-2">
+    <div>
+        <a asp-controller="User" asp-action="Add" class="btn btn-primary" type="button">Kullanici Olustur</a>
+    </div>
+</div>

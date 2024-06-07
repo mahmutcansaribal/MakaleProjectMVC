@@ -1,0 +1,32 @@
+﻿@model MakaleProject.Models.User
+@{
+    ViewData["Title"] = "Kullanıcı Ekleme Sayfasi";
+}
+
+<form asp-action="Add" method="post">
+    <div class="border p-3 mt-5">
+        <div class="row pb-3">
+            <h2>Rol Ekleme Sayfasi</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <br />
+            <label asp-for="MailAddress" class="form-label"></label>
+            <input asp-for="MailAddress" class="form-control" />
+            <br />
+            <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" class="form-control" />
+            <br />
+            <label asp-for="State" class="form-label"></label>
+            <input type="checkbox" asp-for="State" class="form-check-input" />
+            <br />
+            <label asp-for="RoleId" class="form-label"></label>
+            <select asp-for="RoleId" class="form-control" asp-items="ViewBag.Roles"></select>
+            <br />
+        </div>
+        <button type="submit" class="btn btn-info">Kullanıcı Ekle</button>
+        <a asp-controller="User" asp-action="Index" class="btn btn-primary">Kullanicilar</a>
+    </div>
+</form>
