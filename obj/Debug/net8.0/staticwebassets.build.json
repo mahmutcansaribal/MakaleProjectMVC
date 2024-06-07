@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f+yIuXi8r4aZPRkZWyKX+oUOU+tbvoR49guWq9i/lCY=",
+  "Hash": "h+SsFetwZ3xfD3Gb5+8YtXvoQRgZhWaxNHPESC7W5bM=",
   "Source": "MakaleProject",
   "BasePath": "_content/MakaleProject",
   "Mode": "Default",
@@ -1193,6 +1193,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\halil\\OneDrive\\Desktop\\MakaleProjectMVC-master\\wwwroot\\makaleler\\ex_14kad.c.c",
+      "SourceId": "MakaleProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\halil\\OneDrive\\Desktop\\MakaleProjectMVC-master\\wwwroot\\",
+      "BasePath": "_content/MakaleProject",
+      "RelativePath": "makaleler/ex_14kad.c.c",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\makaleler\\ex_14kad.c.c"
+    },
+    {
+      "Identity": "C:\\Users\\halil\\OneDrive\\Desktop\\MakaleProjectMVC-master\\wwwroot\\makaleler\\ex_dmx_slave.c",
+      "SourceId": "MakaleProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\halil\\OneDrive\\Desktop\\MakaleProjectMVC-master\\wwwroot\\",
+      "BasePath": "_content/MakaleProject",
+      "RelativePath": "makaleler/ex_dmx_slave.c",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\makaleler\\ex_dmx_slave.c"
     }
   ]
 }

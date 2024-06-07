@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\halil\\OneDrive\\Desktop\\MakaleProjectMVC-master\\wwwroot\\makaleler\\ex_14kad.c.c",
+      "PackagePath": "staticwebassets\\makaleler\\ex_14kad.c.c"
+    },
+    {
+      "Id": "C:\\Users\\halil\\OneDrive\\Desktop\\MakaleProjectMVC-master\\wwwroot\\makaleler\\ex_dmx_slave.c",
+      "PackagePath": "staticwebassets\\makaleler\\ex_dmx_slave.c"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MakaleProject.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

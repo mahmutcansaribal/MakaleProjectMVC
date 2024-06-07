@@ -13,6 +13,7 @@
             <td>Kullanici Mail Adresi</td>
             <td>Durum</td>
             <td>Rol</td>
+            <td>Makale Yükle</td>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +25,9 @@
                 <td>@user.State</td>
                 <td>@user.Role.RoleName</td>
                 <td><a asp-controller="User" asp-action="Delete" asp-route-id="@user.ID" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a asp-controller="User" asp-action="Upload" asp-route-id="@user.ID" class="btn btn-dark">Makale yükle</a>
+                </td>
             </tr>
         }
     </tbody>

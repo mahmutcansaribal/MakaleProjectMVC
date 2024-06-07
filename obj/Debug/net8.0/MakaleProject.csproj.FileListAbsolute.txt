@@ -252,3 +252,4 @@ C:\Users\halil\OneDrive\Desktop\MakaleProjectMVC-master\obj\Debug\net8.0\refint\
 C:\Users\halil\OneDrive\Desktop\MakaleProjectMVC-master\obj\Debug\net8.0\MakaleProject.pdb
 C:\Users\halil\OneDrive\Desktop\MakaleProjectMVC-master\obj\Debug\net8.0\MakaleProject.genruntimeconfig.cache
 C:\Users\halil\OneDrive\Desktop\MakaleProjectMVC-master\obj\Debug\net8.0\ref\MakaleProject.dll
+C:\Users\halil\OneDrive\Desktop\MakaleProjectMVC-master\obj\Debug\net8.0\MakaleProject.sourcelink.json

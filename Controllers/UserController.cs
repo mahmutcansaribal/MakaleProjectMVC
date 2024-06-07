@@ -77,6 +77,22 @@ namespace MakaleProject.Controllers
             }
             return View();
         }
+        public IActionResult Upload(int userId)
+        {
+            return View();
+        }
+        public IActionResult UploadFile(IFormFile formFile)
+        {
+           
+            var ext = Path.GetExtension(formFile.FileName); //gets the extensions
+            var fileName = Path.GetFileName(formFile.FileName);
+            var path = Directory.GetCurrentDirectory() + "/wwwroot" + "/makaleler/"  +fileName;
+
+            FileStream stream = new FileStream(path, FileMode.Create);
+            formFile.CopyTo(stream);
+
+            return RedirectToAction("Upload");
+        }
     }
 
 }
