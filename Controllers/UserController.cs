@@ -64,7 +64,8 @@ namespace MakaleProject.Controllers
                 Console.WriteLine($"RoleId: {user.RoleId}");
                 return View(user);
             }
-
+            string newPassword = user.Hash(user.Password);
+            user.Password =newPassword;
             _userRepository.Add(user);
             _userRepository.SaveDb();
             return RedirectToAction("Index");
