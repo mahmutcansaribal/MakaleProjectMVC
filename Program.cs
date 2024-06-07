@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ArticleDbContext>();
 builder.Services.AddScoped<IRoleRepository,RoleRepository>();
+builder.Services.AddScoped<IUserRepository,UserRepository>();
 
 var configuratin = builder.Configuration;
 var app = builder.Build();

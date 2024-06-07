@@ -18,7 +18,7 @@ namespace MakaleProject.Controllers
         }
         public IActionResult Index()
         {
-            List<User> users = _userRepository.GetAll().ToList();
+            List<User> users = _userRepository.GetUsers();
             return View(users);
         }
         public string GetRoleName(int roleId)

@@ -1,5 +1,6 @@
 ﻿using MakaleProject.Models.Context;
 using MakaleProject.Models.RepositoryDesignPattern.EntityRepositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace MakaleProject.Models.RepositoryDesignPattern.RepositoryClasses
 {
@@ -12,5 +13,6 @@ namespace MakaleProject.Models.RepositoryDesignPattern.RepositoryClasses
             _articleDbContext = articleDbContext;
         }
 
+        
     }
 }
