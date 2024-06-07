@@ -3,19 +3,22 @@ using MakaleProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using MakaleProject.Models.RepositoryDesignPattern.EntityRepositories;
 
 namespace MakaleProject.Controllers
 {
     public class UserController : Controller
     {
         private readonly ArticleDbContext _articleDbContext;
-        public UserController(ArticleDbContext context)
+        private readonly IUserRepository _userRepository;
+        public UserController(IUserRepository context, ArticleDbContext articleDbContext)
         {
-            _articleDbContext = context;
+            _userRepository = context;
+            _articleDbContext = articleDbContext;
         }
         public IActionResult Index()
         {
-            List<User> users = _articleDbContext.Users.Include(u => u.Role).ToList();
+            List<User> users = _userRepository.GetAll().ToList();
             return View(users);
         }
         public string GetRoleName(int roleId)
@@ -62,17 +65,17 @@ namespace MakaleProject.Controllers
                 return View(user);
             }
 
-            _articleDbContext.Users.Add(user);
-            _articleDbContext.SaveChanges();
+            _userRepository.Add(user);
+            _userRepository.SaveDb();
             return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {
-            User user = _articleDbContext.Users.Find(id);
+            User user = _userRepository.GetById(id);
             if (user != null)
             {
-                _articleDbContext.Remove(user);
-                _articleDbContext.SaveChanges();
+                _userRepository.DeleteById(user);
+                _userRepository.SaveDb();
                 return RedirectToAction("Index");
             }
             return View();

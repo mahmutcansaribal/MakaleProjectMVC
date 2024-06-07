@@ -125,3 +125,4 @@ C:\Users\mahmu\source\repos\MakaleProject\MakaleProject\obj\Debug\net8.0\refint\
 C:\Users\mahmu\source\repos\MakaleProject\MakaleProject\obj\Debug\net8.0\MakaleProject.pdb
 C:\Users\mahmu\source\repos\MakaleProject\MakaleProject\obj\Debug\net8.0\MakaleProject.genruntimeconfig.cache
 C:\Users\mahmu\source\repos\MakaleProject\MakaleProject\obj\Debug\net8.0\ref\MakaleProject.dll
+C:\Users\mahmu\source\repos\MakaleProject\MakaleProject\obj\Debug\net8.0\MakaleProject.sourcelink.json

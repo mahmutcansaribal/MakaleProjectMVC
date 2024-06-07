@@ -1,0 +1,12 @@
+﻿@model Role
+
+<form method="post">
+    <div>Role Güncelleme Sayfasi</div>
+    <br />
+    <div class="mb-3">
+        <input type="hidden" asp-for="RoleId" />
+        <label asp-for="RoleName" class="p-0"></label>
+        <input asp-for="RoleName" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-info">Rol Guncelle</button>
+</form>

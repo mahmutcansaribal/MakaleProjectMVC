@@ -12,6 +12,7 @@
             <td>ID</td>
             <td>Role Adi</td>
             <td>Silme</td>
+            <td>Güncelleme</td>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +22,7 @@
                 <td>@role.RoleId</td>
                 <td>@role.RoleName</td>
                 <td><a asp-controller="Role" asp-action="Delete" asp-route-id="@role.RoleId" class="btn btn-danger">Sil</a></td>
+                <td><a asp-controller="Role" asp-action="Update" asp-route-id="@role.RoleId" class="btn btn-warning">Guncelle</a></td>
             </tr>
         }
     </tbody>
