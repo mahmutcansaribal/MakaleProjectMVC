@@ -1,5 +1,8 @@
 ﻿@model List<User>
-
+@{
+    string pasif = "PASİF";
+    string aktif = "AKTİF";
+}
 <div class="container">
     <div class="row-cols-md-1 pt-3 ob-4">
         <h1>Kullanicilar</h1>
@@ -13,6 +16,8 @@
             <td>Kullanici Mail Adresi</td>
             <td>Durum</td>
             <td>Rol</td>
+            <td>Sil</td>
+            <td>Güncelle</td>
         </tr>
     </thead>
     <tbody>
@@ -21,9 +26,19 @@
             <tr>
                 <td>@user.Name</td>
                 <td>@user.MailAddress</td>
-                <td>@user.State</td>
+                <td text>@if(user.State == false)
+                    {
+                        <span style="color:red;font-weight:bold">@pasif</span>
+                    }
+                    else
+                    {
+                        <span style="color:green; font-weight:bold">@aktif</span>
+
+                    }
+                </td>
                 <td>@user.Role.RoleName</td>
                 <td><a asp-controller="User" asp-action="Delete" asp-route-id="@user.ID" class="btn btn-danger">Sil</a></td>
+                <td><a asp-controller="User" asp-action="Update" asp-route-id="@user.ID" class="btn btn-warning">Güncelle</a></td>
             </tr>
         }
     </tbody>

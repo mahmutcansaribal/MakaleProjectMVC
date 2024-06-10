@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MakaleProject.Models
 {
@@ -14,6 +15,7 @@ namespace MakaleProject.Models
         public bool State { get; set; }
         public int RoleId { get; set; }
         //TODO İLİŞKİLER
+        [ForeignKey(nameof(RoleId))]
         public Role? Role { get; set; }
         public ICollection<ArticleDetails>? ArticleDetails { get; set; }
         public ICollection<Comment>? Comments { get; set; }

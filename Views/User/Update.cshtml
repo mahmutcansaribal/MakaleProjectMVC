@@ -1,0 +1,25 @@
+﻿@model User
+
+<form method="post">
+    <div>User Güncelleme Sayfasi</div>
+    <br />
+    <div class="mb-3">
+        <input type="hidden" asp-for="ID" />
+        <label asp-for="Name" class="p-0"></label>
+        <input asp-for="Name" class="form-control" />
+        <br />
+        <label asp-for="MailAddress" class="p-0"></label>
+        <input asp-for="MailAddress" class="form-control" />
+        <br />
+        <label asp-for="Password" class="p-0"></label>
+        <input asp-for="Password" class="form-control" />
+        <br />
+        <label asp-for="State" class="form-label"></label>
+        <input type="checkbox" asp-for="State" class="form-check-input" />
+        <br />
+        <label asp-for="RoleId" class="form-label"></label>
+        <select asp-for="RoleId" class="form-control" asp-items="ViewBag.Roles"></select>
+    </div>
+    <button type="submit" class="btn btn-info">Kullanıcı Ekle</button>
+    <a asp-controller="User" asp-action="Index" class="btn btn-primary">Kullanicilar</a>
+</form>

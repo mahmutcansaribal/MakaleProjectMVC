@@ -21,11 +21,11 @@ namespace MakaleProject.Controllers
             List<User> users = _userRepository.GetUsers();
             return View(users);
         }
-        public string GetRoleName(int roleId)
-        {
-            var roleName = _articleDbContext.Roles.FirstOrDefault(r => r.RoleId == roleId)?.RoleName;
-            return roleName ?? "";
-        }
+        //public string GetRoleName(int roleId)
+        //{
+        //    var roleName = _articleDbContext.Roles.FirstOrDefault(r => r.RoleId == roleId)?.RoleName;
+        //    return roleName ?? "";
+        //}
         [HttpGet]
         public IActionResult Add()
         {
@@ -64,8 +64,10 @@ namespace MakaleProject.Controllers
                 Console.WriteLine($"RoleId: {user.RoleId}");
                 return View(user);
             }
+            //TODO Özkan 256 HashPassword Code
             string newPassword = user.Hash(user.Password);
-            user.Password =newPassword;
+            user.Password = newPassword;
+
             _userRepository.Add(user);
             _userRepository.SaveDb();
             return RedirectToAction("Index");
@@ -76,6 +78,37 @@ namespace MakaleProject.Controllers
             if (user != null)
             {
                 _userRepository.DeleteById(user);
+                _userRepository.SaveDb();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            
+            var user  = _articleDbContext.Users.Include(u=> u.Role).FirstOrDefault(u => u.ID == id);
+            var roles = _articleDbContext.Roles.Select(r => new Role
+            {
+                RoleId = r.RoleId,
+                RoleName = r.RoleName
+            }).ToList();
+            ViewBag.Roles = new SelectList(roles, "RoleId", "RoleName");
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult Update(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                string newPassword = user.Hash(user.Password);
+                user.Password = newPassword;
+
+                _userRepository.Update(user);
                 _userRepository.SaveDb();
                 return RedirectToAction("Index");
             }
